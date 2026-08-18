@@ -1,4 +1,4 @@
-## 📥 Trained Model Weights
+ Trained Model Weights
 
 The trained model file (`best_model.pth`) is too large to host directly on GitHub, so it is stored on Google Drive. 
 
