@@ -70,7 +70,7 @@ The test set contains degraded images only. Therefore, the restored test outputs
 The training process is provided in:
 
 training/
-    train_unet.ipynb
+    Training_script.ipynb
 
 The notebook reproduces the training pipeline, including:
 
@@ -91,12 +91,12 @@ The final model is selected based on the lowest validation loss.
 
 The final U-Net model was evaluated on 320 validation images.
 
-Metric| Result
-PSNR| 28.0438 dB
-SSIM| 0.757247
-Average inference time| 25.82 ms/image
-Total inference time| 8.26 seconds
-Validation images| 320
+Metric : Result
+PSNR                   : 28.0438 dB
+SSIM                   : 0.757247
+Average inference time : 25.82 ms/image
+Total inference time   : 8.26 seconds
+Validation images      : 320
 
 These results represent the final selected U-Net model used for the project.
 
@@ -130,13 +130,13 @@ Create a Python environment:
 
 python -m venv venv
 
-Activate the environment.
+Activate the environment:
 
-Linux / macOS
+1.Linux / macOS
 
 source venv/bin/activate
 
-Windows
+2.Windows
 
 venv\Scripts\activate
 
@@ -150,7 +150,7 @@ pip install -r requirements.txt
 
 The standalone evaluation script is provided at:
 
-evaluation/evaluate.py
+evaluation/evaluation.py
 
 It accepts:
 
@@ -159,11 +159,11 @@ It accepts:
 
 Run:
 
-python evaluation/evaluate.py <TEST_IMAGE_DIRECTORY> <OUTPUT_DIRECTORY>
+python evaluation/evaluation.py <TEST_IMAGE_DIRECTORY> <OUTPUT_DIRECTORY>
 
 Example:
 
-python evaluation/evaluate.py ./test_images ./restored_outputs
+python evaluation/evaluation.py ./test_images ./restored_outputs
 
 The script automatically:
 
@@ -231,19 +231,19 @@ A reviewer can therefore reproduce the training process or directly run inferenc
 
 The model is evaluated using:
 
-PSNR
+PSNR:
 
 Peak Signal-to-Noise Ratio measures the pixel-level reconstruction quality between the restored image and the ground-truth image.
 
 Higher PSNR indicates better reconstruction quality.
 
-SSIM
+SSIM:
 
 Structural Similarity Index measures similarity in image structure and visual information.
 
 Higher SSIM indicates better structural preservation.
 
-Inference Time
+Inference Time:
 
 Inference time measures the time required by the model to restore an image and is reported as milliseconds per image.
 
