@@ -1,0 +1,4 @@
+The sufficient for running the evaluation
+
+    numpy
+    torch
